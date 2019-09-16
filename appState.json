@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "ss/lambda.js",
-        "code": "\nexports.handler = async(event)=>{\n    \n    return{}\n\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = async (event) => {\n    sns.subscribe({\n        Protocol: 'https',\n        Endpoint: 'https://052p9kjn18.execute-api.us-east-1.amazonaws.com/test112/qa/indu/sns\t',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:TestSNS'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    return {}\n\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -70,6 +70,18 @@
           "stageName": "test112",
           "mode": 1
         }
+      },
+      "snsusEast1TestSNS": {
+        "name": "snsusEast1TestSNS",
+        "type": "SNS",
+        "config": {
+          "topicMode": 1,
+          "topicName": "TestSNS",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:TestSNS",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "subscriptions": []
+        }
       }
     },
     "customTemplate": {
@@ -87,7 +99,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -97,7 +117,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568629223559
+    "lastSave": 1568630933294
   },
   "VCS_STATE": {
     "provider": "GitHub",
