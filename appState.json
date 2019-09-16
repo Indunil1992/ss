@@ -1,0 +1,109 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "1f8a282d-bb3a-4aab-98a2-1045ab5e6573": {
+        "id": "1f8a282d-bb3a-4aab-98a2-1045ab5e6573",
+        "parent": null,
+        "name": "ss",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "d1ac4270-46d9-4ad9-8441-3445e6612bb9"
+        ],
+        "isRemovable": false,
+        "filePath": "ss"
+      },
+      "d1ac4270-46d9-4ad9-8441-3445e6612bb9": {
+        "id": "d1ac4270-46d9-4ad9-8441-3445e6612bb9",
+        "parent": "1f8a282d-bb3a-4aab-98a2-1045ab5e6573",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ss/lambda.js",
+        "code": "\nexports.handler = async(event)=>{\n    \n    return{}\n\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1sachithraAPInameqaindusnsany",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "rootNode": "1f8a282d-bb3a-4aab-98a2-1045ab5e6573",
+    "openFiles": [
+      "d1ac4270-46d9-4ad9-8441-3445e6612bb9"
+    ],
+    "currentFileId": "d1ac4270-46d9-4ad9-8441-3445e6612bb9",
+    "resources": {
+      "apigusEast1sachithraAPInameqaindusnsany": {
+        "name": "apigusEast1sachithraAPInameqaindusnsany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "sachithraAPIname",
+          "apiId": "052p9kjn18",
+          "endpointType": "REGIONAL",
+          "rootResourceId": "zrjp6rdv3b",
+          "existingResources": {
+            "/indunil": "gv2c1w",
+            "/indunil/qa/tst": "r6hp77",
+            "/indunil/qa": "yptvr5",
+            "/": "zrjp6rdv3b"
+          },
+          "resourceMode": 0,
+          "resourceName": "qa/indu/sns",
+          "resourcePath": "/qa/indu/sns",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "test112",
+          "mode": 1
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "ss",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1568629223559
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "ss",
+      "url": "https://github.com/Indunil1992/ss"
+    }
+  }
+}
